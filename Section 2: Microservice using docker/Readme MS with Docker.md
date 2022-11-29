@@ -10,6 +10,58 @@
 - To stop running container **docker stop [container-id]**
 - To deploy docker image **docker push docker.io/[image-name]** 
 
+# Updating Loans microservices to make them Docker compatible using Buildpacks #
+### Key Steps ###
+- Update the respective pom.xml files with the below build plugin details. This will allow us to create docker images with out the need of Dockerfile.
+  ```<build>
+	<plugins>
+		<plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+			<configuration>
+				<image>
+					<name>eazybytes/${project.artifactId}</name>
+				</image>
+			</configuration>
+		</plugin>
+	</plugins>
+</build> 
+- To generate docker image **mvn spring-boot:build-image**
 
+# To start all the container at once #
+- Install docker compose.
+- Validate docker compose running **docker-compose --version**
+- Write a **docker-compose.yml** file with below content.
+- To start all microservice container at once **docker-compose up**
+- To stop all microservice container at once **docker-compose down**
+``` version: "3.8"
+services:
+
+  accounts:
+    image: eazybytes/accounts:latest
+    mem_limit: 700m
+    ports:
+      - "8080:8080"
+    networks:
+      - eazybank-network
+    
+  loans:
+    image: eazybytes/loans:latest
+    mem_limit: 700m
+    ports:
+      - "8090:8090"
+    networks:
+      - eazybank-network
+    
+  cards:
+    image: eazybytes/cards:latest
+    mem_limit: 700m
+    ports:
+      - "9000:9000"
+    networks:
+      - eazybank-network
+    
+networks:
+  eazybank-network:  
 
 
