@@ -8,7 +8,7 @@ Below are the key steps where we focused on set up of Config Server inside our m
 1. Add dependency Config Server,Spring Boot Actuator to Config server spring boot project.
 2. Add **@EnableConfigServer** to the ConfigserverApplication.java file.
 3. Create a config folder under resources to configure all the properties. 
-   For example: https://github.com/eazybytes/microservices-with-spring-sectionwise-code/tree/master/section7/configserver/src/main/resources/config
+   For example: https://github.com/sonisg/Microservices-with-spring/tree/main/Section%203%20:%20Configuration%20Management/configServer/src/main/resources/config
 4. Add properties to application.properties. (From the same spring project)
    ```
       spring.application.name=configserver
