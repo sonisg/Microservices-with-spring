@@ -1,0 +1,5 @@
+com/micro/Loans/repository/LoansRepository.class
+com/micro/Loans/model/Loans.class
+com/micro/Loans/LoansApplication.class
+com/micro/Loans/controller/LoansController.class
+com/micro/Loans/model/Customer.class
