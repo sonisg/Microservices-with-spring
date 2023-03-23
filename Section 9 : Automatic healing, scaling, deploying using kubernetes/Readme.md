@@ -2,7 +2,7 @@
 
 ### Kubernetes Command and Connection ###
 **Using GCP:**
-1. Create a GCP account and create a cluster according to your requirements.
+1. Create a GCP account and create a cluster according to your requirements (https://github.com/sonisg/Microservices-with-spring/tree/main/Section%2010%20:%20Deploy%20MS%20into%20K8%20cluster).
 2. Enable Cloud Logging API from API and services.
 3. Enable stack driver monitoring api for
 4. Can connect through active cloud shell/GCP terminal (UI) or system terminal (gcloud container cluster...)
