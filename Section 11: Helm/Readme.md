@@ -14,3 +14,8 @@ Install helm.
 2. To install helm chart into K8 cluster **helm install sample-deployment chart-name**.
 3. To upgrade **helm upgrade sample-deployment chart-name**.
 4. To build **helm dependency build**
+5. To see history **helm history chart-name**.
+6. To rollback to previous version **helm rollback chart-name revision**.
+7. To check **helm ls**.
+8. To uninstall **helm uninstall chart-name**
+
