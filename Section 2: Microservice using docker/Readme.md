@@ -12,7 +12,7 @@
 
 # Updating Loans microservices to make them Docker compatible using Buildpacks #
 ### Key Steps ###
-- Update the respective pom.xml files with the below build plugin details. This will allow us to create docker images with out the need of Dockerfile.
+- Update the respective pom.xml files with the below build plugin details.This will allow us to create docker images with out the need of Dockerfile.
   ```<build>
 	<plugins>
 		<plugin>
